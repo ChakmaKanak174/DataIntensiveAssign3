@@ -1,6 +1,38 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data for {{ location }}</title>
+</head>
 
-<html>
+<body>
+    <h2> Data for {{ location }}</h2>
+
+    <table border="1">
+        <tr> 
+            <th> Student_ID </th>
+            <th> Name</th>
+            <th> DOB </th>
+            <th> Nationality </th>
+            <th> Dept_ID </th>
+            <th> Campus</th>
+        </tr>
+
+        {% for row in data %}
+            <tr>
+                <td> {{ row[0] }} </td>
+                <td> {{ row[1] }} </td>
+                <td> {{ row[2] }} </td>
+                <td> {{ row[3] }} </td>
+                <td> {{ row[4] }} </td>
+                <td> {{ row[5] }} </td>
+            </tr>
+        {% endfor %}
 
 
+    </table>
+
+
+</body>
 </html>

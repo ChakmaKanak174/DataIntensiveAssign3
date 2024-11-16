@@ -1,10 +1,67 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Location</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 40px;
+        }
+        .spaced {
+            margin-right: 10px; 
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 300px;
+            width: 100%;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
 
-    </head>
 
-    <body>
-        <p> Demo paragraph</p>
-    </body>
+<h2>Select Location for Fetching DATA  </h2>    
+
+<div class="form-container">
+    
+    <form action="/submit-location" method="post">
+        <label for="location">Select Location:</label>
+        <select name="location" id="location" required>
+            <option value="">--Choose a location--</option>
+            <option value="Lahti">Lahti</option>
+            <option value="Kouvola">Kouvola</option>
+            <option value="Lappenranta">Lappenranta</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
 </html>
